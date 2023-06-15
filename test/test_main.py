@@ -18,7 +18,7 @@ class TestMain(unittest.TestCase):
         sys.modules.pop("main", None)
 
     @patch("builtins.input", return_value="Alice")
-    def test_prints_hello_Alice(self, _mock_input):
+    def test_prints_hello_alice(self, _mock_input):
         """
         Testa se o arquivo main.py imprime a saída correta
         quando o usuário é Alice
@@ -30,7 +30,7 @@ class TestMain(unittest.TestCase):
         self.assertEqual("oi, Alice!", captured_output.getvalue().strip())
 
     @patch("builtins.input", return_value="Bernardo")
-    def test_prints_hello_other_Bernardo(self, _mock_input):
+    def test_prints_hello_other_bernardo(self, _mock_input):
         """
         Testa se o arquivo main.py imprime a saída correta quando o usuário é Bernardo
         """
